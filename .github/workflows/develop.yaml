@@ -1,0 +1,21 @@
+name: Development of chatio Workflow
+on:
+  push:
+    branches:
+      - master 
+jobs:
+  Development:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "first step"
+        run: echo "This is the first step of the development workflow."
+        - name: "list the direcyory 1"
+        run: 
+          ls 
+          - name: "checkout into the root directory"
+          uses: actions/checkout@v4
+          -name: "Build a docker image"
+          run:
+            docker build -t chatio:1 .
+            - name: "push to Docker Hub"
+            run:
