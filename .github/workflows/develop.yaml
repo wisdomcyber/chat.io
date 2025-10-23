@@ -7,9 +7,9 @@ jobs:
   Development:
     runs-on: ubuntu-latest
     steps:
-      - name: "first step"
+      -name: "first step"
         run: echo "This is the first step of the development workflow."
-        - name: "list the direcyory 1"
+        -name: "list the direcyory 1"
         run: 
           ls 
           - name: "checkout into the root directory"
